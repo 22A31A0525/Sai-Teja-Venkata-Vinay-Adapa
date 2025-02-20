@@ -36,7 +36,7 @@ export default function Navbar() {
 
     // Effect to handle scroll-based active link highlighting
     useEffect(() => {
-        const sections = ['home', 'about', 'portfolio', 'contact'];
+        const sections = ['home', 'about', 'education', 'portfolio', 'contact'];
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
@@ -83,12 +83,13 @@ export default function Navbar() {
     const navLinks = [
         { href: '#home', label: 'Home' },
         { href: '#about', label: 'About' },
+        { href: '#education', label: 'Education' },
         { href: '#portfolio', label: 'Portfolio' },
         { href: '#contact', label: 'Contact' },
     ];
 
     return (
-        <nav className="sticky top-0 left-0 z-50 w-full  md:h-auto md:bg-gray-900/50  shadow-lg h-screen ">
+        <nav className="sticky top-0 left-0 z-50 w-full h-auto bg-gray-900/50  shadow-lg max-[760px]:bg-none ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     {/* Logo/Name Section */}
@@ -133,7 +134,7 @@ export default function Navbar() {
                             aria-expanded={isMenuOpen}
                         >
                             <span className="sr-only">Open main menu</span>
-                            <motion.div animate={isMenuOpen ? "open" : "closed"} className="w-6 h-6">
+                            <motion.div animate={isMenuOpen ? "open" : "closed"} className="w-6 h-6 z-100">
                                 <motion.span variants={{ closed: { rotate: 0, y: 0 }, open: { rotate: 45, y: 5 } }} className="block w-full h-0.5 bg-current" />
                                 <motion.span variants={{ closed: { opacity: 1 }, open: { opacity: 0 } }} className="block w-full h-0.5 bg-current my-1.5" />
                                 <motion.span variants={{ closed: { rotate: 0, y: 0 }, open: { rotate: -45, y: -5 } }} className="block w-full h-0.5 bg-current" />

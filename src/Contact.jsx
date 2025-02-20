@@ -86,7 +86,7 @@ export default function ContactForm() {
     }, [status]);
 
     return (
-        <section id="contact" className="min-h-screen w-full flex flex-col items-center justify-center py-20 px-4 overflow-hidden">
+        <section id="contact" className=" min-h-52 max-h-auto w-full flex flex-col items-center justify-center py-20 px-4 overflow-hidden">
             <div className="w-full max-w-2xl mx-auto">
                 <AnimatedSectionTitle text="Get In Touch" />
                 <p className="max-w-xl mx-auto mt-4 mb-12 text-gray-300 text-center">

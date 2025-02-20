@@ -1,3 +1,4 @@
+
 # 🚀 Sai Teja Venkata Vinay Adapa - Portfolio
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-LIVE-blueviolet?style=for-the-badge&logo=react&logoColor=61DAFB)](https://22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/)
@@ -100,4 +101,3 @@ text
 Feel free to fork, customize, and contribute via Pull Requests.
 
 
-<!-- This README is for the portfolio repository only. For more backstory and GitHub stats, visit the profile README! -->
