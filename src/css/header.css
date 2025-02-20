@@ -1,0 +1,31 @@
+nav {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  background: linear-gradient(to bottom, #060607, #100e16 50%, #060607);
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  width: 100%;
+}
+
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 300px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+   color: whitesmoke;
+    
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
