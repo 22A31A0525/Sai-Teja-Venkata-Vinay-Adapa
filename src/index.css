@@ -1,0 +1,44 @@
+@import "tailwindcss";
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.animate-wiggle {
+  width: 100%;
+  min-height: 100vh;
+  animation: bgchange 2s ease-in-out 6.5s 1 forwards; /* Updated animation duration */
+  background: linear-gradient(to bottom, #170a3b, #1d1043 50%, #150a39);
+}
+
+@keyframes bgchange {
+  
+
+  0% {
+    background: linear-gradient(to bottom, #170a3b, #1d1043 50%, #150a39); /* Maintain the gradient */
+    filter: blur(0px); /* Keep no blur in the middle */
+  }
+
+  50% {
+    background: rgb(3, 0, 20);
+  
+    filter: blur(20px); /* Apply blur towards the end */
+  }
+
+  100% {
+    background: rgb(6, 1, 32); /* Final background is black */
+    filter: blur(0px); /* Remove blur */
+  }
+}
+
+
+
+#root{
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+}
+
+
+
+
+

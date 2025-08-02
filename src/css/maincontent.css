@@ -1,0 +1,72 @@
+/* Glowing Circles */
+.circle {
+  position: absolute; /* Fixed positioning so they move with scroll */
+  width: 220px;
+  height: 200px;
+  filter: blur(100px);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+/* Circle Positions */
+.circle.top-left {
+  top: 15%;
+  background: rgb(102, 0, 255);
+  left: 20%;
+}
+
+.circle.top-right {
+  top: 15%;
+  background: rgb(198, 132, 255);
+  right: 10%;
+}
+
+.circle.bottom-left {
+  bottom: 10%;
+  left: 30%; 
+  background: rgb(51, 153, 255);
+}
+
+.circle.bottom-right {
+  bottom: 25%;
+  right: 10%;
+  width: 300px;
+  height: 300px;
+  background-color: #33409f;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translate(-50px, 50px);
+  }
+
+  70%{
+    transform: translate(50px, -150px);
+  }
+  100% {
+    transform: translate(0px,150px);
+  }
+}
+
+
+
+
+
+
+.sh{
+  box-shadow: 5px 5px 30px rgba(105, 18, 255, 0.7);
+  border-color: rgb(37, 19, 112);
+  min-width: 180px;
+
+}
+
+.resume{ 
+  background: linear-gradient(158deg, #5f43cb 40%, #a442ff 80%);
+}
+
+
+

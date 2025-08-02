@@ -1,0 +1,173 @@
+  .highlight-icons{
+    margin-left: 25px;
+    box-shadow: -1px -1px 20px rgba(169, 53, 252, 0.7);
+  }
+  
+  .highlight-icons{
+    animation-name: stepbystep;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  @keyframes stepbystep {
+    0% {
+      opacity: 0;
+      transform: translate(150px,-150px);
+    }
+    50%{
+      transform: translate(0px,150px);
+    }
+    80%{
+      transform: translate(150px,0px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  .highlight-icons:nth-child(1){
+    animation-delay: 0s;
+  }
+  
+  .highlight-icons:nth-child(2){
+    animation-delay: 0.4s;
+  }
+  
+    
+  .highlight-icons:nth-child(3){
+    animation-delay: 0.7s;
+  }
+
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%); /* Starts from above */
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0px); /* Moves to the normal position */
+    }
+  }
+  
+  .greeting {
+    display: inline-block;
+    margin-left: 10px;
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0; /* Ensures the elements start off hidden */
+  }
+  
+  /* Applying different animation delays for each greeting */
+  .greeting:nth-child(1) {
+    animation-delay: 1.2s;
+  }
+  
+  .greeting:nth-child(2) {
+    animation-delay: 1.6s; 
+  }
+  
+  .greeting:nth-child(3) {
+    animation-delay: 2s; 
+  }
+  @keyframes moveUpWithBounce {
+    0% {
+      opacity: 0;
+      transform: translateY(30px); 
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-10px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+  
+  .title {
+    display: inline-block;
+    animation: moveUpWithBounce 1s ease-out forwards;
+    margin-left: 10px;
+    opacity: 0; 
+  }
+  
+  
+  .title:nth-child(1) {
+    animation-delay: 2.2s; /* First word starts after 0.5s */
+  }
+  
+  .title:nth-child(2) {
+    animation-delay: 2.6s; /* Second word starts after 1s */
+  }
+  
+  
+  
+  .title{
+    background:linear-gradient(158deg, #5f43cb 40%, #8a0cff 80%);
+      -webkit-background-clip: text;
+      color: transparent;
+  }
+
+
+
+
+.fade {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  text-shadow:30px 40px 50px rgb(156 18 255 / 70%) ;
+  background:linear-gradient(158deg, #5f43cb 40%, #8a0cff 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+
+@keyframes typeEffect {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.url-entry {
+  display: inline-block;
+  overflow: hidden; /* Hide anything outside the width */
+  white-space: nowrap; /* Prevent line breaks */
+  border-right: 3px solid; /* Simulate the cursor effect */
+  width: 0; /* Start with no width */
+  animation: typeEffect 3s steps(50) 1s forwards; /* Type animation */
+  font-family: "Courier New", Courier, monospace; /* Monospace font to mimic typing */
+  animation-delay: 3.5s;
+  opacity: 1;
+ text-shadow:-1px -1px 30px rgb(156 18 255 / 70%) ;
+ background:linear-gradient(158deg, #5f43cb 40%, #8a0cff 80%);
+ -webkit-background-clip: text;
+ color: transparent;
+}
+
+/* Optional: Style the cursor */
+.url-entry::after {
+  content: '|';
+  animation: blink 0.5s infinite step-start;
+
+}
+
+
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
