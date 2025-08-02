@@ -11,8 +11,9 @@ import tailwind from './assets/tailwindcss.png'
 import git from './assets/git.png'
 import db from './assets/database.png'
 import vite from './assets/vite.png'
+import springboot from './assets/spring-boot.png'
 
-const TechStack = () => {
+const Techstack = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration in ms
@@ -23,6 +24,7 @@ const TechStack = () => {
   // Tech Stack images and names
   const techStacks = [
     { name: 'Java', image: java },
+    {name:"SpringBoot",image:springboot},
     { name: 'Python', image: python },
     { name: 'HTML', image: html},
     { name: 'CSS', image: css },
@@ -36,8 +38,6 @@ const TechStack = () => {
   
   return (
     <div className="container mx-auto py-12">
-      <h2 className="text-3xl font-semibold text-center mb-12">Tech Stack</h2>
-
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {techStacks.map((tech, index) => (
           <div
@@ -58,4 +58,4 @@ const TechStack = () => {
   );
 };
 
-export default TechStack;
+export default Techstack;

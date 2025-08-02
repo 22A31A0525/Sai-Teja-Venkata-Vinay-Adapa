@@ -52,21 +52,9 @@
   }
 }
 
-/* Text Shadow for Nav Items */
-.nav-item {
-  text-shadow: -1px -1px 30px rgb(156 18 255 / 70%);
-  background:linear-gradient(158deg, #5f43cb 40%, #8a0cff 80%);
-  -webkit-background-clip: text;
-  color: transparent;
-}
 
-.temp{
-  color: white;
-  width: 220px;
-  height: 50px;
-  box-shadow: 5px 5px 30px rgba(105, 18, 255, 0.7);
-  text-shadow: none;
-}
+
+
 
 
 .sh{
@@ -82,7 +70,3 @@
 
 
 
-nav{
-  background-color: #03001480;
-  filter: blur(-150px);
-}

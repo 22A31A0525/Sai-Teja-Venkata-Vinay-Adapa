@@ -2,10 +2,10 @@ import editor from "./assets/code-editor-icon-vector.png";
 import profile from "./assets/user-icon.png";
 import git from './assets/github.png'
 import './css/firstrender.css';
-function FirstRender() {
+function FirstRender({name}) {
 
   return ( 
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className={`flex flex-col items-center justify-center h-screen ${name}`}>
       
     <div className="flex">
       <img src={editor} alt="editor" className="ring-1 w-12 highlight-icons rounded-3xl" />
