@@ -137,7 +137,7 @@ export default function Description() {
   ];
 
   return (
-    <div id="home" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden px-4 py-8">
+    <div id="home" className="relative min-h-60 max-h-auto w-full flex items-center justify-center overflow-hidden px-4 py-8">
       {/* Changed to Flexbox layout */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl w-full">
         {/* Left Column: Text Content */}

@@ -78,7 +78,7 @@ export default function About() {
   const resumeUrl = "./assets/resume.pdf";
 
   return (
-    <section id="about" className="min-h-screen w-full flex items-center justify-center py-20 px-4 overflow-hidden">
+    <section id="about" className=" min-h-52 max-h-auto w-full flex items-center justify-center py-20 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <AnimatedSectionTitle text="About Me" />
 
@@ -117,7 +117,7 @@ export default function About() {
             </p>
             <div className="mt-8">
               <a
-                href={resumeUrl}
+                href="https://drive.google.com/file/d/1hWbPC77wul8J5WIebVlOXDvOdsXG6NGP/view?usp=sharing"
                 download="Resume_SaiTejaVenkataVinayAdapa.pdf"
                 className="inline-flex items-center gap-2 text-white border-2 border-cyan-400 bg-cyan-400/10 font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-cyan-400/20 hover:border-cyan-300 hover:scale-105"
               >

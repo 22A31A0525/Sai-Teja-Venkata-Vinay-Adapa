@@ -222,7 +222,7 @@ export default function Portfolio() {
   const sections = { projects: <Projects />, experience: <Experience />, certificates: <Certificates />, techStack: <TechStack /> };
 
   return (
-    <section id="portfolio" className="min-h-screen w-full flex flex-col items-center justify-center py-20 px-4 overflow-hidden">
+    <section id="portfolio" className=" min-h-52 max-h-auto w-full flex flex-col items-center justify-center py-20 px-4 overflow-hidden">
       <div className="w-full max-w-4xl mx-auto">
         <AnimatedSectionTitle text="Portfolio" />
         <p className="max-w-2xl mx-auto mt-4 mb-12 text-gray-300 text-center">

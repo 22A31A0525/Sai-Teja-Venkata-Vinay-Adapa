@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     setInterval(() => {
       set_timer(false);
-    }, 1500);
+    }, 5500);
   }, []);
 
   const [time, set_timer] = useState(true);
