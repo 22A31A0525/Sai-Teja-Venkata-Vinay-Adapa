@@ -131,9 +131,12 @@ const SocialLinks = () => {
 // --- Main Content Component ---
 export default function Description() {
   const typingStages = [
-    "Computer Science And Engineering",
+    
+"DSA Enthusiast",
+	"Java FullStack Developer",
+"Computer Science And Engineering",
     "Microsoft Learn Student Ambassador",
-    "Full-Stack Enthusiast",
+    
   ];
 
   return (

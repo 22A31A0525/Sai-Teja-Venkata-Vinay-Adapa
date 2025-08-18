@@ -50,9 +50,10 @@ const ProjectCard = ({ title, role, description, tech, githubUrl, liveUrl,has })
 const Projects = () => {
     const projectData = [
         { title: "CareerNexus", role: "Team Lead & Backend Developer", description: "A full-stack campus recruitment platform built with Java and Spring Boot, featuring dedicated dashboards for students, officers, and recruiters.", tech: ["Java", "Spring Boot", "React", "PostgreSQL"], githubUrl: "https://github.com/CareerNexus-Pragati-Engineering-College",has:true },
-        { title: "DevBridge IDE", role: "Individual Contributor", description: "A collaborative code editor with real-time synchronization using WebSockets, JWT for security, and a React-based frontend.", tech: ["Java", "WebSockets", "React", "JWT"], githubUrl: "https://github.com/22A31A0525/DevBridgeIde",has:true,has:true },
+        { title: "DevBridge IDE", role: "Individual Contributor", description: "A collaborative code editor with real-time synchronization using WebSockets, JWT for security, and a React-based frontend.", tech: ["Java","Spring Boot", "WebSockets", "React", "JWT"], githubUrl: "https://github.com/22A31A0525/DevBridgeIde",has:true,liveUrl: "http://devbridge.ddns.net/" },
         { title: "DSA Showcase", role: "Personal Project", description: "A collection of projects implementing key Data Structures and Algorithms in Java, focusing on performance and problem-solving.", tech: ["Java", "DSA", "Algorithms"], githubUrl: "https://github.com/22A31A0525/DSA-Projects",has:false },
         { title: "Now-Weather", role: "Full-Stack Project", description: "A dynamic weather app that provides real-time data, location mapping, and an adaptive background that changes based on the current weather.", tech: ["React", "REST APIs", "Mapping SDK"], githubUrl: "https://github.com/22A31A0525/Now-Weather", liveUrl: "https://saitejavenkat.github.io/Now-Weather/" },
+        {title:" Multi-Profile Browser Automation Script",role:"Personal Project",description:" Developed a Python script to automate repetitive daily web searches across 16 unique browser profiles, demonstrating practical automation skills.",tech:["Python","PyautoGui","Automation","os"],githubUrl:"https://github.com/22A31A0525/Automated-Browser-Tasks/tree/main",has:false},
     ];
 
     return (
