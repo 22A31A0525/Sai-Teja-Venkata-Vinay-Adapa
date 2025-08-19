@@ -1,175 +1,183 @@
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion"; // Import framer-motion
 import side_video from "./assets/side_video.mp4";
-import "./css/maincontent.css";
-import { useState, useEffect } from "react";
 import leetcode from "./assets/leetcode.png";
 import hackerrank from "./assets/hackerrank.png";
 import linkedin from "./assets/linkedin.png";
 import github from "./assets/github.png";
 
-function Description() {
-  const [text, setText] = useState("");
-  const [currentStage, setCurrentStage] = useState(0);
-  const [index, setIndex] = useState(0);
-  const [cursorVisible, setCursorVisible] = useState(true);
 
-  const typingSpeed = 100;
-  const eraseSpeed = 10;
+const InnovativeBadge = () => (
+  <motion.span
+    className="flex items-center text-xs md:text-sm font-semibold border border-violet-500/30 rounded-full px-4 py-1 w-fit"
+    whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px rgba(139, 92, 246, 0.4)" }}
+    transition={{ type: "spring", stiffness: 300 }}
+  >
+    <span className="relative flex h-2 w-2 mr-3">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+    </span>
+    Ready To Innovate
+  </motion.span>
+);
 
-  const stages = [
-    "Computer Science And Engineering",
-    "Microsoft Learn Student Ambassador",
-    "Pragati Engineering College",
-  ];
-
-  useEffect(() => {
-    const cursorBlink = setInterval(() => {
-      setCursorVisible((prev) => !prev);
-    }, 500);
-
-    return () => clearInterval(cursorBlink); // Clean up the blinking interval
-  }, []);
-
-  useEffect(() => {
-    console.log(text, text.length);
-  }, [text]);
-
-  useEffect(() => {
-    let typingTimeout;
-    let erasingTimeout;
-
-    const eraseText = () => {
-      setText((prev) => prev.slice(0, -1));
-
-      if (text.length > 0) {
-        erasingTimeout = setTimeout(eraseText, eraseSpeed);
-      } else if (currentStage != stages.length - 1) {
-        setIndex(0);
-
-        setCurrentStage((prev) => prev + 1);
-      } else {
-        setCurrentStage(0);
-        setIndex(0);
-        setText("");
-      }
-    };
-
-    const typeText = () => {
-      const currentText = stages[currentStage];
-      if (index < currentText.length) {
-        typingTimeout = setTimeout(() => {
-          setText((prev) => prev + currentText[index]);
-          setIndex(index + 1);
-        }, typingSpeed);
-      } else {
-        setTimeout(() => {
-          eraseText();
-        }, 150);
-      }
-    };
-
-    typeText();
-
-    return () => {
-      clearTimeout(typingTimeout);
-      clearTimeout(erasingTimeout);
-    };
-  }, [index, currentStage, text]);
+const AnimatedHeading = () => {
+  const text = "Java Developer";
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.08, delayChildren: 0.5 * i },
+    }),
+  };
+  const childVariants = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", damping: 12, stiffness: 100 },
+    },
+    hidden: {
+      opacity: 0,
+      y: 20,
+      transition: { type: "spring", damping: 12, stiffness: 200 },
+    },
+  };
 
   return (
-    <div
-      className="flex justify-center items-center w-full z-5  flex-wrap min-h-52 mt-20"
-      id="#home"
+    <motion.h1
+      className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-cyan-400 py-2"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      aria-label={text}
     >
-      <div className="min-lg:w-1/2 min-lg:flex-none ">
-        <div>
-          <span className="flex items-center text-1xl nav-item bg-indigo-500 shadow-lg shadow-indigo-500/50 rounded-4xl temp">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-sparkles sm:w-4 sm:h-4 w-3 h-3 mr-2 text-blue-400 ml-3"
-            >
-              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
-              <path d="M20 3v4"></path>
-              <path d="M22 5h-4"></path>
-              <path d="M4 17v2"></path>
-              <path d="M5 18H3"></path>
-            </svg>
-            Ready To Innovate
-          </span>
-        </div>
-        <h1 className="text-white text-8xl font-bold mt-5 max-[590px]:text-6xl">Java</h1>
-        <h2 className="nav-item text-8xl font-bold mt-5 max-[590px]:text-6xl">Developer</h2>
-        <div className="text-white text-xl font-mono mt-6">
-          <span className="text-2xl max-[590px]:text-[15px]">{text}</span>
-          {cursorVisible && (
-            <span className="inline-block w-2 h-6 bg-white ml-1 animate-blink"></span>
-          )}
-        </div>
-        
-        <div className="mt-10 flex items-center">
-          <a
-            href="https://www.linkedin.com/in/sai-teja-venkata-vinay-adapa/"
-            target="_blank"
-            rel="noopener noreferrer "
-          >
-            <img
-              src={linkedin}
-              alt="linkedin"
-              className="w-10 h-10 mr-5 hover:shadow-lg hover:shadow-violet-500 rounded-3xl "
-            />
-          </a>
-          <a
-            href="https://github.com/22A31A0525"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={github}
-              alt="github"
-              className="w-10 h-10 mr-5 hover:shadow-lg hover:shadow-violet-500 rounded-3xl "
-            />
-          </a>
-          <a
-            href="https://leetcode.com/u/22A31A0525/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={leetcode}
-              alt="leetcode"
-              className="w-10 h-10 mr-5 hover:shadow-lg hover:shadow-violet-500 rounded-3xl "
-            />
-          </a>
-          <a
-            href="https://www.hackerrank.com/profile/22A31A0_525"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={hackerrank}
-              alt="hackerrank"
-              className="w-10 h-10 mr-5 hover:shadow-lg hover:shadow-violet-500 rounded-3xl "
-            />
-          </a>
-        </div>
-      </div>
+      {text.split("").map((char, index) => (
+        <motion.span key={index} variants={childVariants}>
+          {char === " " ? "\u00A0" : char}
+        </motion.span>
+      ))}
+    </motion.h1>
+  );
+};
 
-      <video
-        src={side_video}
-        className="w-120 h-96 max-[620px]:w-100 max-[400]:w-80"
-        autoPlay
-        loop
-        muted
-      ></video>
+const TypingEffect = ({ stages }) => {
+  const [text, setText] = useState("");
+  const [isErasing, setIsErasing] = useState(false);
+  const [stageIndex, setStageIndex] = useState(0);
+
+  useEffect(() => {
+    const typingSpeed = 100;
+    const erasingSpeed = 50;
+    const delay = 1500;
+
+    const handleTyping = () => {
+      const currentStage = stages[stageIndex];
+      if (!isErasing && text.length < currentStage.length) {
+        setText(currentStage.substring(0, text.length + 1));
+      } else if (!isErasing && text.length === currentStage.length) {
+        setTimeout(() => setIsErasing(true), delay);
+      } else if (isErasing && text.length > 0) {
+        setText(currentStage.substring(0, text.length - 1));
+      } else if (isErasing && text.length === 0) {
+        setIsErasing(false);
+        setStageIndex((prev) => (prev + 1) % stages.length);
+      }
+    };
+
+    const timeout = setTimeout(handleTyping, isErasing ? erasingSpeed : typingSpeed);
+    return () => clearTimeout(timeout);
+  }, [text, isErasing, stageIndex, stages]);
+
+  return (
+    <div className="text-xl md:text-2xl font-mono mt-2 h-8">
+      <span className="text-gray-300">{text}</span>
+      <span className="w-1 h-6 md:h-7 bg-cyan-400 inline-block ml-1 animate-pulse" />
+    </div>
+  );
+};
+
+const SocialLinks = () => {
+  // Using placeholder images for demonstration as local assets won't load here.
+  const icons = [
+    { src: linkedin, alt: "LinkedIn", href: "https://www.linkedin.com/in/sai-teja-venkata-vinay-adapa/" },
+    { src: github, alt: "GitHub", href: "https://github.com/22A31A0525" },
+    { src:leetcode, alt: "LeetCode", href: "https://leetcode.com/u/22A31A0525/" },
+    { src: hackerrank, alt: "HackerRank", href: "https://www.hackerrank.com/profile/22A31A0_525" },
+  ];
+
+  return (
+    <div className="mt-8 flex items-center space-x-6">
+      {icons.map((icon) => (
+        <motion.a
+          key={icon.alt}
+          href={icon.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.2, rotate: 10 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <img
+            src={icon.src}
+            alt={icon.alt}
+            className="w-8 h-8 md:w-10 md:h-10 rounded-full grayscale hover:grayscale-0 transition-all duration-300"
+          />
+        </motion.a>
+      ))}
+    </div>
+  );
+};
+
+// --- Main Content Component ---
+export default function Description() {
+  const typingStages = [
+    
+"DSA Enthusiast",
+	"Java FullStack Developer",
+"Computer Science And Engineering",
+    "Microsoft Learn Student Ambassador",
+    
+  ];
+
+  return (
+    <div id="home" className="relative min-h-60 max-h-auto w-full flex items-center justify-center overflow-hidden px-4 py-8">
+      {/* Changed to Flexbox layout */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl w-full">
+        {/* Left Column: Text Content */}
+        <motion.div
+          className="text-white flex flex-col gap-4 w-full md:w-1/2 text-center md:text-left"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="flex justify-center md:justify-start">
+            <InnovativeBadge />
+          </div>
+          <AnimatedHeading />
+          <TypingEffect stages={typingStages} />
+          <div className="flex justify-center md:justify-start">
+            <SocialLinks />
+          </div>
+        </motion.div>
+
+        {/* Right Column: Video */}
+        <motion.div
+          className="p-2 bg-gradient-to-r from-violet-600 to-cyan-400 rounded-2xl shadow-2xl shadow-cyan-500/20 w-full max-w-md md:w-1/2"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          whileHover={{ scale: 1.03, boxShadow: "0px 0px 30px rgba(52, 211, 235, 0.5)" }}
+        >
+          <video
+            src={side_video}
+            className="w-full h-auto rounded-xl"
+            autoPlay
+            loop
+            muted
+            playsInline 
+          ></video>
+        </motion.div>
+      </div>
     </div>
   );
 }
-
-export default Description;

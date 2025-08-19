@@ -6,13 +6,13 @@ function App() {
   useEffect(() => {
     setInterval(() => {
       set_timer(false);
-    }, 6500);
+    }, 5500);
   }, []);
 
   const [time, set_timer] = useState(true);
   return (
     <>
-      {time && <FirstRender />}
+      {time && <FirstRender name={"animate-wiggle"}/>}
 
       {!time && <MainContent />}
     </>
