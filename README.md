@@ -1,4 +1,5 @@
 
+
 # 🚀 Sai Teja Venkata Vinay Adapa - Portfolio
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-LIVE-blueviolet?style=for-the-badge&logo=react&logoColor=61DAFB)](https://22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/)
@@ -99,5 +100,6 @@ text
 5. Open [http://localhost:3000](http://localhost:5137) in your browser!
 
 Feel free to fork, customize, and contribute via Pull Requests.
+
 
 
