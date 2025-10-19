@@ -36,7 +36,7 @@ export default function Navbar() {
 
     // Effect to handle scroll-based active link highlighting
     useEffect(() => {
-        const sections = ['home', 'about', 'education', 'portfolio', 'contact'];
+        const sections = ['home', 'about',  'portfolio', 'contact'];
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
@@ -83,7 +83,7 @@ export default function Navbar() {
     const navLinks = [
         { href: '#home', label: 'Home' },
         { href: '#about', label: 'About' },
-        { href: '#education', label: 'Education' },
+        
         { href: '#portfolio', label: 'Portfolio' },
         { href: '#contact', label: 'Contact' },
     ];
