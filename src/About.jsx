@@ -55,7 +55,10 @@ const InfoCard = ({ icon, number, title, subtitle, delay }) => (
     initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5, delay: delay }}
-    whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(168, 85, 247, 0.3)" }}
+    whileHover={{
+      scale: 1.05,
+      boxShadow: "0px 0px 20px rgba(168, 85, 247, 0.3)",
+    }}
     viewport={{ once: true }}
   >
     <div className="absolute -z-10 inset-0 bg-gradient-to-br from-violet-600 to-cyan-500 opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
@@ -72,13 +75,15 @@ const InfoCard = ({ icon, number, title, subtitle, delay }) => (
   </motion.div>
 );
 
-
 export default function About() {
   // Placeholder for your resume file. Replace with the correct import.
   const resumeUrl = "./assets/resume.pdf";
 
   return (
-    <section id="about" className=" min-h-52 max-h-auto w-full flex items-center justify-center py-20 px-4 overflow-hidden">
+    <section
+      id="about"
+      className=" min-h-52 max-h-auto w-full flex items-center justify-center py-20 px-4 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
         <AnimatedSectionTitle text="About Me" />
 
@@ -100,7 +105,6 @@ export default function About() {
             />
           </motion.div>
 
-       
           <motion.div
             className="text-white text-center lg:text-left"
             initial={{ opacity: 0, x: 50 }}
@@ -113,15 +117,36 @@ export default function About() {
               Sai Teja Venkata Vinay Adapa
             </h2>
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              An aspiring Software Engineer with a strong foundation in Java, Spring Boot, and React. I have hands-on experience building robust applications, from leading the development of a full-stack campus recruitment platform to implementing real-time features with WebSockets. I thrive on solving complex problems and am eager to contribute my technical and collaborative skills to a dynamic development team.
+              An aspiring Software Engineer with a strong foundation in Java,
+              Spring Boot, and React. I have hands-on experience building robust
+              applications, from leading the development of a full-stack campus
+              recruitment platform to implementing real-time features with
+              WebSockets. I thrive on solving complex problems and am eager to
+              contribute my technical and collaborative skills to a dynamic
+              development team.
             </p>
             <div className="mt-8">
               <a
-                href="https://drive.google.com/file/d/1C3YwgFVF2_WJKe05aUEXVIfcAo7rUCT_/view?usp=sharing"
+                href="https://drive.google.com/file/d/18iIJKeYRWinJt6txgjgd-gxQgHISpy-M/view?usp=sharing"
                 download="Resume_SaiTejaVenkataVinayAdapa.pdf"
                 className="inline-flex items-center gap-2 text-white border-2 border-cyan-400 bg-cyan-400/10 font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-cyan-400/20 hover:border-cyan-300 hover:scale-105"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-5 h-5"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" x2="12" y1="15" y2="3" />
+                </svg>
                 Download Resume
               </a>
             </div>
@@ -131,21 +156,69 @@ export default function About() {
         {/* Info Cards Section - Updated to a 3-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
           <InfoCard
-            icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-white"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>}
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-8 h-8 text-white"
+              >
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            }
             number="04+"
             title="Key Projects"
             subtitle="Innovative full-stack solutions"
             delay={0.2}
           />
           <InfoCard
-            icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-white"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>}
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-8 h-8 text-white"
+              >
+                <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+            }
             number="01"
             title="Internship"
             subtitle="Infosys (Virtual)"
             delay={0.4}
           />
           <InfoCard
-            icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-white"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle cx="12" cy="8" r="6" /></svg>}
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-8 h-8 text-white"
+              >
+                <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                <circle cx="12" cy="8" r="6" />
+              </svg>
+            }
             number="08"
             title="Certifications"
             subtitle="Professional skills validated"
