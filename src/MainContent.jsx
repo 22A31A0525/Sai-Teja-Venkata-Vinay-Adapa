@@ -19,7 +19,7 @@ function MainContent() {
       <Navbar />
       <Description />
       <About />
-      <Education />
+      {/* <Education /> */}
       <Portfolio />
       <ContactForm />
       <Footer />

@@ -117,13 +117,9 @@ export default function About() {
               Sai Teja Venkata Vinay Adapa
             </h2>
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              An aspiring Software Engineer with a strong foundation in Java,
-              Spring Boot, and React. I have hands-on experience building robust
-              applications, from leading the development of a full-stack campus
-              recruitment platform to implementing real-time features with
-              WebSockets. I thrive on solving complex problems and am eager to
-              contribute my technical and collaborative skills to a dynamic
-              development team.
+              Results-oriented final-year Computer Science student and project lead adept at delivering end-to-end full-stack applications using
+Java, Spring Boot, and React. Skilled in architecting scalable backend systems and RESTful architectures, and developing intuitive
+frontend interfaces. Seeking a software engineering role to apply technical expertise in scalable product development.
             </p>
             <div className="mt-8">
               <a
@@ -131,7 +127,7 @@ export default function About() {
                 download="Resume_SaiTejaVenkataVinayAdapa.pdf"
                 className="inline-flex items-center gap-2 text-white border-2 border-cyan-400 bg-cyan-400/10 font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-cyan-400/20 hover:border-cyan-300 hover:scale-105"
               >
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -146,8 +142,8 @@ export default function About() {
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                   <polyline points="7 10 12 15 17 10" />
                   <line x1="12" x2="12" y1="15" y2="3" />
-                </svg>
-                Download Resume
+                </svg> */}
+                Resume
               </a>
             </div>
           </motion.div>
@@ -196,9 +192,9 @@ export default function About() {
                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
               </svg>
             }
-            number="01"
+            number="02"
             title="Internship"
-            subtitle="Infosys (Virtual)"
+            subtitle="TaskLabs & Infosys"
             delay={0.4}
           />
           <InfoCard

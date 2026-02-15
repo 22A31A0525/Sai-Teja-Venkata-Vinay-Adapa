@@ -70,6 +70,23 @@ const Experience = () => {
     return (
         <>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }} className="w-full">
+                {/* TaskLabs Internship */}
+                <div className="relative bg-gray-900/50 p-6 rounded-xl border border-white/10 overflow-hidden group transition-all duration-300 hover:border-violet-400/50 mb-6">
+                    <div className="absolute -z-10 top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-600/20 to-violet-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="flex flex-col sm:flex-row justify-between items-start mb-3">
+                        <div>
+                            <h3 className="text-xl font-bold text-white">Software Developer Intern</h3>
+                            <p className="text-md text-cyan-400">TaskLabs</p>
+                        </div>
+                        <p className="text-sm text-gray-400 mt-2 sm:mt-0">Nov 2025 - Present</p>
+                    </div>
+                    <ul className="list-disc list-inside text-gray-400 text-sm space-y-1 mb-4">
+                        <li>Developing a production-grade browser extension using React.js and modern JavaScript, leveraging Chrome Extension APIs.</li>
+                        <li>Utilizing Chrome APIs (such as storage, runtime messaging, and tabs) to enable inter-component communication and extension functionality.</li>
+                        <li>Improving extension performance, handling edge cases, and debugging issues across different browser environments.</li>
+                    </ul>
+                </div>
+
                 <div className="relative bg-gray-900/50 p-6 rounded-xl border border-white/10 overflow-hidden group transition-all duration-300 hover:border-violet-400/50">
                     <div className="absolute -z-10 top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-600/20 to-violet-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="flex flex-col sm:flex-row justify-between items-start mb-3">

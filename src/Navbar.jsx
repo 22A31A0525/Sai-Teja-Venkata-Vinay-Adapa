@@ -83,7 +83,7 @@ export default function Navbar() {
     const navLinks = [
         { href: '#home', label: 'Home' },
         { href: '#about', label: 'About' },
-        { href: '#education', label: 'Education' },
+        // { href: '#education', label: 'Education' },
         { href: '#portfolio', label: 'Portfolio' },
         { href: '#contact', label: 'Contact' },
     ];
