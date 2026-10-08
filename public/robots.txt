@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/sitemap.xml

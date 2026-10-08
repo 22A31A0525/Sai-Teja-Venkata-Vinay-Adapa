@@ -1,105 +1,72 @@
+# Sai Teja Venkata Vinay Adapa portfolio
 
+A shared backend engineering portfolio built with React, Vite, and Tailwind CSS.
+Recent Computer Science graduate, CGPA 8.04/10. Featured work includes CareerNexus,
+DevBridge IDE, and IntelliAgents AutoAuth.
 
-# 🚀 Sai Teja Venkata Vinay Adapa - Portfolio
+[Live portfolio](https://22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/)
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-LIVE-blueviolet?style=for-the-badge&logo=react&logoColor=61DAFB)](https://22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/)
+## Development
 
+Use Node.js 20 or newer and install the locked dependencies:
 
+```sh
+npm ci
+npm run dev
+```
 
----
+Vite serves the app under `/Sai-Teja-Venkata-Vinay-Adapa/`.
+An optional Firebase public-key override is documented in `.env.example`.
 
-## 👋 Welcome!
+## Checks and production output
 
-This repository contains the complete source and assets for my live portfolio website:  
-🌐 **[22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/](https://22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/)**
+```sh
+npm test
+npm run lint
+npm run build
+npm run verify:release
+npm run preview
+```
 
----
+The build creates a Vite bundle, then prerenders the portfolio into `dist/index.html`.
+React hydrates that content in the browser. Project and case-study fragments share
+the same page and work under the GitHub Pages base path. Production build and
+hydration verification are pending; see the phase notes before deployment.
 
-## 🌟 About Me
+## Architecture
 
-- 🧑‍💻 Aspiring Software Engineer, B.Tech CSE (2026), Andhra Pradesh, India
-- ⚡️ Love building **robust full-stack applications**, optimizing databases, & collaborating in agile teams
-- 🛠️ Core: Java, Spring Boot, React, Python, PostgreSQL, REST APIs
-- 🥇 [HackerRank Certified](https://www.hackerrank.com/profile/22a31a0_525) (React, Java, Python)
-- 📈 **Quantifiable Achievements:**  
-  - 🚀 Improved query speed by **45%**
-  - ✔️ Achieved **99% accuracy** in automated data validation
-  - 🎯 Delivered projects **20% faster** via team leadership and smart task tracking
+The application shell lives in `src/app`. Feature components live in
+`src/features`, shared layout in `src/components/layout`, content records in
+`src/content`, contact integration in `src/services`, and design tokens and CSS
+in `src/styles`. Firebase loads on submission rather than during initial reading.
 
----
+## Content and implementation records
 
-## 🧰 Tech Stack
+- [Phase 0 evidence audit](docs/phase-0/README.md)
+- [Phase 1 shared information hierarchy](docs/phase-1/README.md)
+- [Phase 2 case studies](docs/phase-2/README.md)
+- [Phase 3 visual system](docs/phase-3/README.md)
+- [Phases 4 and 5 architecture and accessibility](docs/phase-4-5/README.md)
+- [Phases 6 through 8 and release gates](docs/release/README.md)
 
-<div>
+Numerical outcome claims need measurement evidence. Individual module ownership,
+employment dates, resume freshness, and demo operation are documented with their
+verification status.
 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="32"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="32"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="32"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" width="32"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" width="32"/>
-  <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="32"/>
-</div>
+## Contact service
 
+The form saves validated messages to the existing Firestore contacts collection.
+A direct email link remains available. Saving a message does not establish email
+notification delivery.
 
-If anyone wants to pull (clone/download) your portfolio repository and run or edit it locally, here’s the standard process you should include in your portfolio repo’s README. You can place these instructions under a “Getting Started” or “How to Pull & Run” section:
+`firestore.rules` is a local proposed policy. Existing cloud rules and App Check
+enforcement are not verified. Merge and emulator-test the policy before any
+deployment; see the phase notes for scope and remaining checks.
 
-🚦 How to Pull and Run This Portfolio Repository
-1. Clone the Repository
+## Publishing
 
-bash: git clone https://github.com/22a31a0525/Sai-Teja-Venkata-Vinay-Adapa.git
-2. Move Into the Project Directory
-
-bash: cd Sai-Teja-Venkata-Vinay-Adapa
-3. Install Dependencies
-
-If your portfolio uses React (or Node.js), run:
-
-bash: npm install
-4. Start the Development Server
-
-bash: npm start
-This will start the app locally at http://localhost:5173 (or the port specified).
-
-5. Make Changes and Push (if contributing)
-
-Create a new branch:
-
-bash
-git checkout -b my-feature-branch
-After making changes:
-
-bash
-git add .
-git commit -m "Describe your changes"
-git push origin my-feature-branch
-Then open a Pull Request (PR) via GitHub if you want changes merged in.
-
-
-Example README Section to Add
-text
-## 📥 Getting Started
-
-To pull (clone) and run this portfolio locally:
-
-1. Clone this repo:
-git clone https://github.com/22a31a0525/Sai-Teja-Venkata-Vinay-Adapa.git
-
-text
-2. Change directory:
-cd Sai-Teja-Venkata-Vinay-Adapa
-
-text
-3. (If React/Node) Install packages:
-npm install
-
-text
-4. Start the app:
-npm start
-
-text
-5. Open [http://localhost:3000](http://localhost:5137) in your browser!
-
-Feel free to fork, customize, and contribute via Pull Requests.
-
-
+GitHub Actions provides a manually dispatched Publish portfolio workflow. It
+requires passing lint, tests, production build, artifact checks, and a production
+dependency audit. Configure the repository's Pages source to GitHub Actions first.
+The latest implementation has not been built or published; see the release gates.
 
