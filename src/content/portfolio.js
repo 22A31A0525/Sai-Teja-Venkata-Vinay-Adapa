@@ -1,6 +1,6 @@
 export const resumeUrl = "https://drive.google.com/file/d/18iIJKeYRWinJt6txgjgd-gxQgHISpy-M/view?usp=sharing";
 export const navigation = [
-  { id: "portfolio", label: "Work" }, { id: "experience", label: "Experience" },
+  { id: "portfolio", label: "Projects" }, { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" }, { id: "about", label: "About" }, { id: "contact", label: "Contact" },
 ];
 // Source evidence and ownership limits: docs/phase-0/projects.md.

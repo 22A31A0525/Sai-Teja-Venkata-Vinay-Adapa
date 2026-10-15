@@ -1,8 +1,8 @@
 # Sai Teja Venkata Vinay Adapa portfolio
 
-A shared backend engineering portfolio built with React, Vite, and Tailwind CSS.
-Recent Computer Science graduate, CGPA 8.04/10. Featured work includes CareerNexus,
-DevBridge IDE, and IntelliAgents AutoAuth.
+A backend-first full-stack engineering portfolio built with React, Vite, and Tailwind CSS.
+Professional experience spans React browser extensions and Python data validation;
+featured work includes CareerNexus, DevBridge IDE, and IntelliAgents AutoAuth.
 
 [Live portfolio](https://22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/)
 
@@ -30,8 +30,9 @@ npm run preview
 
 The build creates a Vite bundle, then prerenders the portfolio into `dist/index.html`.
 React hydrates that content in the browser. Project and case-study fragments share
-the same page and work under the GitHub Pages base path. Production build and
-hydration verification are pending; see the phase notes before deployment.
+the same page and work under the GitHub Pages base path. The October 2026 refresh
+passes the production build and release checks; see the refresh notes for browser
+verification and remaining deployment checks.
 
 ## Architecture
 
@@ -48,6 +49,7 @@ in `src/styles`. Firebase loads on submission rather than during initial reading
 - [Phase 3 visual system](docs/phase-3/README.md)
 - [Phases 4 and 5 architecture and accessibility](docs/phase-4-5/README.md)
 - [Phases 6 through 8 and release gates](docs/release/README.md)
+- [Backend-first full-stack refresh](docs/refresh/README.md)
 
 Numerical outcome claims need measurement evidence. Individual module ownership,
 employment dates, resume freshness, and demo operation are documented with their
@@ -68,5 +70,6 @@ deployment; see the phase notes for scope and remaining checks.
 GitHub Actions provides a manually dispatched Publish portfolio workflow. It
 requires passing lint, tests, production build, artifact checks, and a production
 dependency audit. Configure the repository's Pages source to GitHub Actions first.
-The latest implementation has not been built or published; see the release gates.
+The latest implementation has been built and verified locally, but has not been published.
+See the refresh notes and release gates before deployment.
 

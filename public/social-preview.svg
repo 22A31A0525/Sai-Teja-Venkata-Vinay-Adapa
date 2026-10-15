@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#090f1c"/><rect x="60" y="60" width="1080" height="510" rx="28" fill="#111c2e" stroke="#293b53"/><g font-family="Segoe UI,Arial,sans-serif"><text x="110" y="160" fill="#7dd3fc" font-size="26">SAI TEJA VENKATA VINAY ADAPA</text><text x="110" y="285" fill="#f1f5f9" font-size="76" font-weight="700">Backend Engineer</text><text x="110" y="365" fill="#c0ccdc" font-size="30">APIs · Real-time services · Data workflows</text><text x="110" y="475" fill="#94a7bf" font-size="24">Java · Spring Boot · PostgreSQL · Python</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#101214"/>
+  <rect x="60" y="60" width="1080" height="510" rx="28" fill="#191d21" stroke="#303833"/>
+  <path d="M88 60h1024" stroke="#74d7b0" stroke-width="3"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="110" y="150" fill="#74d7b0" font-size="24" letter-spacing="2">SAI TEJA VENKATA VINAY ADAPA</text>
+    <text x="110" y="260" fill="#f2f3f2" font-size="76" font-weight="700">Backend Engineer</text>
+    <text x="110" y="330" fill="#a4ead0" font-size="50" font-weight="600">&amp; Full-Stack Developer</text>
+    <text x="110" y="405" fill="#c2c7c5" font-size="28">APIs · Interfaces · Real-time services</text>
+    <path d="M110 455h980" stroke="#303833"/>
+    <text x="110" y="510" fill="#9ba5a0" font-size="23">Java · Spring Boot · React · PostgreSQL · Python</text>
+  </g>
+</svg>

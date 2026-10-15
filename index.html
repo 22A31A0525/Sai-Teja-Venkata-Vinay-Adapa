@@ -2,20 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark";
+      } catch { document.documentElement.dataset.theme = "dark"; }
+    </script>
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sai Teja Adapa's backend engineering portfolio: Java, Spring Boot, real-time services, and AI-assisted workflows." />
+    <meta name="description" content="Sai Teja Adapa, Backend Engineer & Full-Stack Developer. Explore Java and Spring Boot APIs, React browser integrations, real-time services, and engineering case studies." />
     <link rel="canonical" href="https://22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Sai Teja Adapa | Backend Engineer" />
-    <meta property="og:description" content="Explore recruitment APIs, real-time collaboration, and AI-assisted backend workflows." />
+    <meta property="og:title" content="Sai Teja Adapa | Backend Engineer & Full-Stack Developer" />
+    <meta property="og:description" content="Backend depth, React interfaces, and practical engineering experience. Explore projects, architecture, and implementation decisions." />
     <meta property="og:url" content="https://22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/" />
     <meta property="og:image" content="https://22a31a0525.github.io/Sai-Teja-Venkata-Vinay-Adapa/social-preview.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Sai Teja Adapa, Backend Engineer" />
+    <meta property="og:image:alt" content="Sai Teja Adapa, Backend Engineer and Full-Stack Developer" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>Sai Teja Adapa | Backend Engineer</title>
+    <title>Sai Teja Adapa | Backend Engineer & Full-Stack Developer</title>
   </head>
   <body >
     <div id="root"></div>

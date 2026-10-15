@@ -1,5 +1,10 @@
 # Backend engineering profile facts
 
+> Positioning update, 13 October 2026: the owner selected backend-first full-stack
+> development. The earlier backend-only preference below is historical. Current
+> copy may include Full-Stack Developer using the recorded React/browser work;
+> employment, seniority, personal project ownership, and metric limits still apply.
+
 ## Confirmed positioning
 
 | Fact | Evidence | Publication wording |

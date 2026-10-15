@@ -1,18 +1,19 @@
-import { resumeUrl } from "../../content/portfolio";
+import ResumeLink from "../../components/ResumeLink";
 import { credentials } from "../../content/credentials";
+import Reveal from "../../motion/Reveal";
 export default function About() {
   return (
-    <section tabIndex={-1} id="about" className="content-section" aria-labelledby="about-title">
+    <Reveal tabIndex={-1} id="about" className="content-section" aria-labelledby="about-title">
       <p className="eyebrow">Background</p><h2 id="about-title" className="section-title">About me</h2>
       <div className="two-column">
         <div>
           <p className="section-copy">I am Sai Teja Venkata Vinay Adapa, a recent Computer Science graduate
-            focused on backend engineering. My work includes leading CareerNexus backend development
+            focused on backend engineering and full-stack development. My work includes leading CareerNexus backend development
             and contributing to applications with real-time and data-processing workflows.</p>
-          <p className="section-copy">Frontend experience with React helps me connect backend services
-            to the people who use them. I am seeking a backend engineering role building APIs,
-            data workflows, and reliable application services.</p>
-          <a className="secondary-action" href={resumeUrl} target="_blank" rel="noopener noreferrer">View résumé ↗</a>
+          <p className="section-copy">My React and browser-extension experience helps me connect backend services
+            to the people who use them. I am seeking backend and full-stack development opportunities
+            building interfaces, APIs, and reliable application services.</p>
+          <ResumeLink />
         </div>
         <div className="surface">
           <h3 className="card-title">Education</h3><p>Bachelor of Technology · Computer Science</p>
@@ -33,6 +34,6 @@ export default function About() {
           </a>
         ))}</div>
       </details>
-    </section>
+    </Reveal>
   );
 }

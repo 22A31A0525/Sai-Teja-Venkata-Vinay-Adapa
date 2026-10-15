@@ -7,6 +7,8 @@ import { caseStudies } from "../src/content/case-studies.js";
 const html = await readFile("dist/index.html", "utf8");
 assert.equal((html.match(/<h1\b/g) || []).length, 1, "Exactly one prerendered main heading required");
 assert.ok(html.includes("Backend Engineer"), "Prerendered portfolio content missing");
+assert.ok(html.includes("Full-Stack Developer"), "Full-stack positioning missing from prerendered content");
+assert.ok(html.indexOf('id="experience"') < html.indexOf('id="portfolio"'), "Experience must precede selected work");
 assert.ok(!html.includes("/src/assets/"), "Development asset URLs leaked into release HTML");
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 assert.equal(new Set(ids).size, ids.length, "Duplicate HTML IDs");

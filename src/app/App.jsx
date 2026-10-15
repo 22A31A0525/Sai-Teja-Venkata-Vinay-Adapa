@@ -1,5 +1,6 @@
-import { MotionConfig } from "framer-motion";
+import MotionProvider from "../motion/MotionProvider";
 import PortfolioPage from "./PortfolioPage";
+import ThemeProvider from "../theme/ThemeProvider";
 export default function App() {
-  return <MotionConfig reducedMotion="user"><PortfolioPage /></MotionConfig>;
+  return <ThemeProvider><MotionProvider><PortfolioPage /></MotionProvider></ThemeProvider>;
 }

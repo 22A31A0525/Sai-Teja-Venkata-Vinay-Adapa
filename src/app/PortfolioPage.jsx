@@ -7,7 +7,6 @@ import Capabilities from "../features/skills/Capabilities";
 import ContactForm from "../features/contact/ContactForm";
 import Footer from "../components/layout/Footer";
 import Navbar from "../components/layout/Navbar";
-import MotionPreferences from "../motion/MotionPreferences";
 
 export default function PortfolioPage() {
   return (
@@ -16,15 +15,14 @@ export default function PortfolioPage() {
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <Hero />
+        <Experience />
         <Projects />
         <CaseStudies />
-        <Experience />
         <Capabilities />
         <About />
         <ContactForm />
       </main>
       <Footer />
-      <MotionPreferences />
     </>
   );
 }

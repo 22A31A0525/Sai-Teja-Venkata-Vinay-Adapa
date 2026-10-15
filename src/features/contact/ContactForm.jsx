@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { submitContact } from "../../services/contact-service";
 import { contactErrorMessage, contactLimits, validateContact } from "../../services/contact-validation";
 import { profile } from "../../content/profile";
+import Reveal from "../../motion/Reveal";
 
 const emptyForm = { name: "", email: "", message: "" };
 
@@ -53,12 +54,12 @@ export default function ContactForm() {
     }
   };
   return (
-    <section tabIndex={-1} id="contact" className="content-section" aria-labelledby="contact-title">
+    <Reveal tabIndex={-1} id="contact" className="content-section" aria-labelledby="contact-title">
       <div className="contact-layout">
         <div>
           <p className="eyebrow">Contact</p>
           <h2 id="contact-title" className="section-title">Let’s build something reliable.</h2>
-          <p className="section-copy">Have a backend engineering opportunity or want to discuss
+          <p className="section-copy">Have a backend or full-stack development opportunity or want to discuss
             a project? Tell me about the team, the problem, and how I can contribute.</p>
           <div className="action-row">
             <a className="text-link" href={`mailto:${profile.email}`}>Email me ↗</a>
@@ -93,7 +94,7 @@ export default function ContactForm() {
           </div>
         </form>
       </div>
-    </section>
+    </Reveal>
   );
 }
 

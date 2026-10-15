@@ -1,5 +1,11 @@
 # Portfolio release status
 
+> Updated verification: the 13 October 2026 refresh passes production build,
+> prerendering, artifact verification, ESLint, and 13 tests. Its production preview
+> was checked in the in-app browser. This document records the earlier release
+> session; see [refresh notes](../refresh/README.md) for current results. Public
+> deployment, field performance, and live contact delivery remain unverified.
+
 The remaining implementation adds an interactive backend request-flow scene,
 release artifact validation, publishing workflows, and metadata. The shared
 portfolio remains usable through text, native controls, and a static diagram.
